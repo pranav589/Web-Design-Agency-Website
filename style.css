@@ -1,0 +1,931 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 96%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #ffa400;
+  color: #fff;
+  font-weight: 500;
+  padding: 13px 80px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+nav {
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .container #burger {
+  color: #ffa400;
+  display: none;
+  cursor: pointer;
+}
+
+nav .container .logo a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #777;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+nav .container .logo a:hover {
+  color: #ffa400;
+}
+
+nav .container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .container .list a {
+  padding: 20px 12px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+nav .container .list a.active, nav .container .list a:hover {
+  background: #ffa400;
+  color: #fff;
+}
+
+.main {
+  width: 100%;
+  min-height: 85vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.main img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s, visibility 1s ease-out;
+  transition: opacity 1s, visibility 1s ease-out;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.main img.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 1s, visibility 1s ease-in;
+  transition: opacity 1s, visibility 1s ease-in;
+}
+
+.main img:first-child {
+  opacity: 1;
+}
+
+.main .container {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main .container h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
+.main .container h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 28px;
+  margin: 16px 0 40px 0;
+}
+
+.main .container .btn:hover {
+  background: #eeeeee;
+  color: #ffa400;
+}
+
+.features {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background: #f9f9f9;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+.features p {
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.features span {
+  color: #06c;
+}
+
+.features span:nth-child(2) {
+  color: #090;
+}
+
+.features .container {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features .container .box {
+  width: 100%;
+  max-width: 220px;
+}
+
+.features .container .box .circle {
+  background: #ffa400;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.features .container .box .circle:hover {
+  background: #303030;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.features .container .box .circle i {
+  color: #fff;
+}
+
+.features .container .box h2 {
+  font-weight: 400;
+  font-size: 22px;
+  margin: 24px 0 10px 0;
+  color: #333;
+}
+
+.features .container .box p {
+  color: #333;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.about {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.about h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+.about p {
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.about .container {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .container .card {
+  width: 100%;
+  max-width: 48%;
+  text-align: left;
+}
+
+.about .container .card h2 {
+  color: #333;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+  line-height: 1;
+}
+
+.about .container .card h3 {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.about .container .card p {
+  color: #333;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.about .container .card .progress-row {
+  padding: 6px 0;
+}
+
+.about .container .card .progress-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .container .card .progress-info p:not(:first-child) {
+  margin: 10px 0;
+}
+
+.about .container .card .progress {
+  width: 100%;
+  height: 7px;
+  border-radius: 4px;
+  background: #999;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.about .container .card .progress .bar {
+  background: #ffa400;
+  height: 7px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.about .container .card .progress .bar.bar.ps {
+  width: 80%;
+}
+
+.about .container .card .progress .bar.bar.jq {
+  width: 90%;
+}
+
+.team {
+  width: 100%;
+  padding: 60px 0;
+  background: #f9f9f9;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.team h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+.team p {
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.team .container {
+  padding: 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team .container .card {
+  width: 100%;
+  max-width: 224px;
+}
+
+.team .container .card p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.team .container .card .pic img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.team .container .card .pic img:hover {
+  border-radius: 50%;
+  opacity: 0.7;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.team .container .card .info {
+  background: #fff;
+  padding: 4px 0;
+  margin: 30px 0 0 0;
+}
+
+.team .container .card .info h2 {
+  color: #ffa400;
+  font-weight: 600;
+  margin: 0;
+}
+
+.portfolio {
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.portfolio h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+.portfolio p {
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.portfolio .container {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolio .container .card {
+  width: 100%;
+  max-width: 244px;
+  margin: 4px 0;
+  position: relative;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+
+.portfolio .container .card:hover .overlay {
+  opacity: 0.7;
+}
+
+.portfolio .container .card:hover .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio .container .card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.portfolio .container .card .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffa400;
+  opacity: 0;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+
+.portfolio .container .card .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #eeeeee;
+  opacity: 0.7;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  display: none;
+}
+
+.contact {
+  width: 100%;
+  padding: 60px 0;
+  background: #303030;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  color: #eeeeee;
+}
+
+.contact p {
+  color: #eeeeee;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.contact .container {
+  padding: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .container .info {
+  width: 100%;
+  max-width: 40%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .container .info h2 {
+  color: #eeeeee;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.contact .container .info a {
+  text-decoration: none;
+  color: #eeeeee;
+  margin: 8px 0;
+  font-size: 14px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .container .info a:nth-child(3), .contact .container .info a:nth-child(4) {
+  color: #ffa400;
+}
+
+.contact .container .info a:nth-child(3):hover, .contact .container .info a:nth-child(4):hover {
+  color: #ffc866;
+}
+
+.contact .container .info a i {
+  margin-right: 10px;
+  color: #ffa400;
+}
+
+.contact .container .form {
+  width: 100%;
+  max-width: 60%;
+  text-align: left;
+}
+
+.contact .container .form .fne {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .container .form .fne input {
+  width: 48%;
+  padding: 14px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 1px solid #444444;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.contact .container .form .fne input:focus {
+  background: #444444;
+}
+
+.contact .container .form .subject input {
+  width: 100%;
+  padding: 14px;
+  margin: 16px 0;
+  background: transparent;
+  border: none;
+  border: 1px solid #444444;
+  outline: none;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.contact .container .form .subject input:focus {
+  background: #444444;
+}
+
+.contact .container .form textarea {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: none;
+  border: 1px solid #444444;
+  outline: none;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.contact .container .form textarea:focus {
+  background: #444444;
+}
+
+.contact .container .form .btn {
+  margin: 10px 0 0 0;
+  padding: 16px 44px;
+  background: transparent;
+  border: 1px solid #444444;
+}
+
+.contact .container .form .btn:hover {
+  background: #ffa400;
+  border: 1px solid #ffa400;
+}
+
+footer {
+  width: 100%;
+  padding: 80px 0;
+  background: #202020;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container .icons .circle {
+  border: 1px solid #eeeeee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 12px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+footer .container .icons .circle:hover {
+  background: #ffa400;
+  border: 1px solid #ffa400;
+}
+
+footer .container .icons .circle i {
+  color: #eeeeee;
+}
+
+footer .container .info p {
+  color: #eeeeee;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+footer .container .info a {
+  text-decoration: none;
+  color: #ffa400;
+  margin-left: 4px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+footer .container .info a:hover {
+  color: #ffc866;
+}
+
+@media (max-width: 768px) {
+  .features .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .features .container .box {
+    max-width: 70%;
+    margin: 30px 0;
+  }
+  .team p br {
+    display: none;
+  }
+  .team .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .team .container .card {
+    max-width: 50%;
+    margin: 20px 0;
+  }
+  .portfolio p br {
+    display: none;
+  }
+  .portfolio .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolio .container .card {
+    max-width: 70%;
+    margin: 20px 0;
+  }
+  .contact p br {
+    display: none;
+  }
+  .contact .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .container .info {
+    max-width: 80%;
+    margin: 50px 0 0 0;
+    text-align: right;
+  }
+  .contact .container .form {
+    max-width: 80%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .features .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .features .container .box {
+    max-width: 40%;
+    margin: 30px 0;
+  }
+  .team .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .team .container .card {
+    max-width: 38%;
+    margin: 30px 0;
+  }
+  .portfolio .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .portfolio .container .card {
+    max-width: 42%;
+    margin: 20px 0;
+  }
+  .contact .container {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .contact .container .info {
+    max-width: 45%;
+    text-align: right;
+  }
+  .contact .container .form {
+    max-width: 45%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  nav .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 20px 0;
+  }
+  nav .container .list {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 10px 0;
+  }
+  nav .container .list a {
+    padding: 20px 4px;
+    font-size: 13px;
+    width: 100%;
+  }
+  nav .container #burger {
+    display: block;
+  }
+  nav .container .logo,
+  nav .container .list {
+    display: none;
+  }
+  .main .container h1,
+  .main .container h2 {
+    font-size: 24px;
+  }
+  .features p br {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  nav .container,
+  .features .container {
+    max-width: 90%;
+  }
+  .about p br {
+    display: none;
+  }
+  .about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .container .card {
+    max-width: 70%;
+    margin: 20px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
